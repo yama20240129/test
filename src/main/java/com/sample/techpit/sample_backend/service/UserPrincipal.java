@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.example.model.User;
+import com.sample.techpit.sample_backend.model.User;
 
 
 public class UserPrincipal implements UserDetails {

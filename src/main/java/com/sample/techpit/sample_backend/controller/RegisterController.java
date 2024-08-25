@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.model.User;
-import com.example.model.UserDto;
-import com.example.service.UserService;
+import com.sample.techpit.sample_backend.model.User;
+import com.sample.techpit.sample_backend.model.UserDto;
+import com.sample.techpit.sample_backend.service.UserService;
+
+
 
 public class RegisterController {
 

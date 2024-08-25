@@ -1,6 +1,6 @@
 package com.sample.techpit.sample_backend.model;
 
-import javax.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotEmpty;
 
 public class UserDto {
 

@@ -1,6 +1,5 @@
 package com.sample.techpit.sample_backend.service;
 
-import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,9 +8,11 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.example.model.User;
-import com.example.model.UserDto;
-import com.example.repository.UserRepository;
+import com.sample.techpit.sample_backend.model.User;
+import com.sample.techpit.sample_backend.model.UserDto;
+import com.sample.techpit.sample_backend.repository.UserRepository;
+import jakarta.transaction.Transactional;
+
 
 @Service
 public class UserService implements UserDetailsService {
