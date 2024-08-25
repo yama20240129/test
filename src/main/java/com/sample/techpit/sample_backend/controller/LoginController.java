@@ -6,8 +6,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 
 
+@Controller
 public class LoginController {
-        @GetMapping("/login")
+    @GetMapping("/login")
     public String login() {
         return "login";  // login.htmlを表示
     }

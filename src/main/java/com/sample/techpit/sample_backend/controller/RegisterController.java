@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
 import org.springframework.web.servlet.ModelAndView;
 
 import com.sample.techpit.sample_backend.model.User;
@@ -13,6 +14,7 @@ import com.sample.techpit.sample_backend.service.UserService;
 
 
 
+@Controller
 public class RegisterController {
 
         // Spring が自動的に UserService の実装を注入します。
