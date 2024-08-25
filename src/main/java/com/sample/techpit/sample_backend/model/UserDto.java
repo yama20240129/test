@@ -10,8 +10,8 @@ public class UserDto {
     @NotEmpty
     private String password;
 
-    @NotEmpty
-    private String email;
+    // @NotEmpty
+    // private String email;
 
     public String getUsername() {
         return username;
@@ -29,12 +29,12 @@ public class UserDto {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
-    }
+    // public String getEmail() {
+    //     return email;
+    // }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    // public void setEmail(String email) {
+    //     this.email = email;
+    // }
     
 }

@@ -23,8 +23,8 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "email", nullable = false, unique = true)
-    private String email;
+    // @Column(name = "email", nullable = false, unique = true)
+    // private String email;
 
     // getters
     public Integer getId() {
@@ -39,9 +39,9 @@ public class User {
         return this.password;
     }
 
-    public String getEmail() {
-        return this.email;
-    }
+    // public String getEmail() {
+    //     return this.email;
+    // }
 
     // setters
     public void setId(Integer id) {
@@ -56,8 +56,8 @@ public class User {
         this.password = password;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    // public void setEmail(String email) {
+    //     this.email = email;
+    // }
     
 }
