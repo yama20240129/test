@@ -10,14 +10,14 @@ import org.springframework.stereotype.Controller;
 public class LoginController {
     @GetMapping("/login")
     public String login() {
-        return "login";  // login.htmlを表示
+        return "login";  
     }
     
     @GetMapping("/")
     public String redirectToIndex() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication != null && authentication.isAuthenticated()) {
-            return "redirect:/index";  // 修正された行
+            return "redirect:/index";  
         }
         return "redirect:/login";
     }
