@@ -35,8 +35,8 @@ public class RegisterController {
                 // ユーザが既に存在する場合の処理
                 return "register"; // ユーザが存在するため、再度登録画面を表示
             }
-            userService.save(userDto);
-            return "login"; // 登録が成功した場合、ログイン画面を表示
+            userService.save(userDto);;
+            return "register_complete";///登録が成功した場合、テスト画面に遷移。確認おｋ
         }
     
 }

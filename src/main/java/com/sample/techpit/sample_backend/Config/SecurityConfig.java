@@ -23,15 +23,24 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .formLogin(formLogin -> 
-                formLogin
-                    .loginPage("/login")
-                    // .permitAll()
-            )
-            .logout(logout -> 
-                logout
-                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-            );
+        .authorizeHttpRequests(authorize -> authorize
+        .requestMatchers("/login", "/register", "/index", "/register_complete").permitAll() 
+        .anyRequest().authenticated() 
+        )
+        // .formLogin(formLogin -> 
+        //     formLogin
+        //         .loginPage("/top")
+        //         // .permitAll()
+        // )
+        .formLogin(formLogin -> 
+            formLogin
+                .loginPage("/login")////アクセス時最優先
+                //成功後、@GetMapping("/")でtopに行く
+        )
+        .logout(logout -> 
+            logout
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+        );
 
         return http.build();
     }

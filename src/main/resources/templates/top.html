@@ -2,24 +2,22 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>テスト用ページ</title>
+<title>SpringBoot サンプルアプリ</title>
 </head>
 <body>
+    (Top)ログインしました。
     <div th:if="${param.login}">
         <p>You have been login.</p>
     </div>
-    <div th:if="${param.login}">
+    <div th:if="${param.logout}">
         <p>You have been logged out.</p>
     </div>
-
     <p>
         ようこそ！
     </p>
-
-
     <p>
-        メニュー(*'▽') 
-        <a th:href="@{/login}">さようなら（退会）</a>  <!-- 新規アカウント作成ページへのリンクを追加 -->
+        <a th:href="@{/logout}">logout</a>  
+        <a th:href="@{/index}">他メニュー</a> 
     </p>
 
 </body>
