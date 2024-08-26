@@ -17,7 +17,6 @@ import com.sample.techpit.sample_backend.service.UserService;
 @Controller
 public class RegisterController {
 
-        // Spring が自動的に UserService の実装を注入します。
         @Autowired
         private UserService userService;
     
